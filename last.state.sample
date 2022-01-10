@@ -1,0 +1,18 @@
+{
+ "state": "off",
+ "schedules": {
+  "00:00": "off",
+  "05:00": "stop",
+  "07:00": "ready",
+  "08:00": "go",
+  "11:45": "warn",
+  "12:00": "stop",
+  "12:45": "ready",
+  "13:00": "go",
+  "19:00": "warn",
+  "20:00": "stop",
+  "23:00": "off"
+ },
+ "scheduler": true,
+ "timer_offset": 0
+}
