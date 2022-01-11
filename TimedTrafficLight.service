@@ -1,15 +1,14 @@
-# /etc/systemd/system/microblog.service
-# sudo systemctl enable /home/pi/RaspI2C/RPI-Service/RPI-GA.service 
+# sudo systemctl enable --now /home/pi/TimedTrafficLight/TimedTrafficLight.service
 # sudo systemctl daemon-reload
-# https://blog.miguelgrinberg.com/post/running-a-flask-application-as-a-service-with-systemd
+# journalctl -f -u TimedTrafficLight
 
 [Unit]
-Description=RaspI2C TimedTrafficLight service
+Description=TimedTrafficLight service
 After=network.target
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/RaspI2C/TimedTrafficLight
+WorkingDirectory=/home/pi/TimedTrafficLight
 ExecStart=/usr/bin/python3 ./TimedTrafficLight.py
 Restart=always
 RestartSec=1
