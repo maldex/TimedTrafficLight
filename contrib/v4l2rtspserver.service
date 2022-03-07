@@ -1,0 +1,16 @@
+# sudo systemctl enable --now ./v4l2rtspserver.service
+# sudo systemctl daemon-reload
+# journalctl -f -u v4l2rtspserver
+
+[Unit]
+Description=V4L2 RTSP Server
+After=network.target
+
+[Service]
+User=pi
+ExecStart=v4l2rtspserver -W 1280 -H 720 -t 3 /dev/video0,hw:1,0 -C 1 -a S16_LE
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
