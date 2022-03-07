@@ -1,7 +1,13 @@
 # TimedTrafficLight
 Raspi based Traffic light indicating the bed-time for the kids.
+This project fetures a timer based, european semaphore system. e.g.
 
-### installation
+- at 19:00 - yellow only (warn): time to prepare for bed
+- at 20:00 - red only (stop): 
+
+![screenshot](doc/Screenshot1.png "screenshot")
+
+### installation    
 ```bash
 # install dependencies
 sudo apt-get update
