@@ -3,9 +3,22 @@ Raspi based Traffic light indicating the bed-time for the kids.
 This project fetures a timer based, european semaphore system. e.g.
 
 - at 19:00 - yellow only (warn): time to prepare for bed
-- at 20:00 - red only (stop): 
+- at 20:00 - red only (stop): bed time
+- at 06:00 - red and yellow (ready): wake up time
+- at 07:00 - green: allowed to leave the bed
+
+between 23 and 6, the lights are off at all.
 
 ![screenshot](doc/Screenshot1.png "screenshot")
+
+additionally, you can fast-forward of postopone the schedule.
+
+### requirements
+any Raspberry Pi should work. Required are three leds, green (pin37/BCM 26), yellow (pin35/BCM 19) and green (pin 33/BCM 13).
+![wire-schematic](doc/README.Wiring2.jpg "schematic")
+![wire-breadboard](doc/README.Wiring1.jpg "breadboard")
+
+
 
 ### installation    
 ```bash
