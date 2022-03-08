@@ -5,7 +5,7 @@ This project fetures a timer based, european semaphore system. e.g.
 - at 19:00 - yellow only (warn): time to prepare for bed
 - at 20:00 - red only (stop): bed time
 - at 06:00 - red and yellow (ready): wake up time
-- at 07:00 - green: allowed to leave the bed
+- at 07:00 - green (go): allowed to leave the bed
 
 between 23 and 6, the lights are off at all.
 
