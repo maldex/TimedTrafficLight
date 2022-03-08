@@ -15,10 +15,7 @@ additionally, you can fast-forward of postopone the schedule.
 
 ### requirements
 any Raspberry Pi should work. Required are three leds, green (pin37/BCM 26), yellow (pin35/BCM 19) and green (pin 33/BCM 13).
-![wire-schematic](doc/README.Wiring2.jpg "schematic")
-![wire-breadboard](doc/README.Wiring1.jpg "breadboard")
-
-
+![wire-schematic](doc/README.Wiring2.jpg "schematic")  ![wire-breadboard](doc/README.Wiring1.jpg "breadboard")
 
 ### installation    
 ```bash
