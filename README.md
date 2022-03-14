@@ -30,4 +30,4 @@ git clone https://github.com/maldex/TimedTrafficLight.git
 sudo systemctl enable --now ${PWD}/TimedTrafficLight/TimedTrafficLight.service
 sudo systemctl daemon-reload
 ```
-access the web-fontend via _http://<ip>:2400_
+access the web-fontend via _http://ip:2400_
