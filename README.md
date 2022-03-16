@@ -31,3 +31,32 @@ sudo systemctl enable --now ${PWD}/TimedTrafficLight/TimedTrafficLight.service
 sudo systemctl daemon-reload
 ```
 access the web-fontend via _http://ip:2400_
+
+
+# test the LED's
+
+```bash
+sudo su - 
+
+echo 13 > /sys/class/gpio/export
+echo 19 > /sys/class/gpio/export
+echo 26 > /sys/class/gpio/export
+
+echo out > /sys/class/gpio/gpio13/direction
+echo out > /sys/class/gpio/gpio19/direction
+echo out > /sys/class/gpio/gpio26/direction
+
+while [ 1 ]; do
+  echo 1 > /sys/class/gpio/gpio13/value
+  echo 1 > /sys/class/gpio/gpio19/value
+  echo 1 > /sys/class/gpio/gpio26/value
+  sleep 1
+  echo 0 > /sys/class/gpio/gpio13/value
+  echo 0 > /sys/class/gpio/gpio19/value
+  echo 0 > /sys/class/gpio/gpio26/value
+  sleep 1
+done
+echo 13 > /sys/class/gpio/unexport
+echo 19 > /sys/class/gpio/unexport
+echo 26 > /sys/class/gpio/unexport
+```

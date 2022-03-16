@@ -8,6 +8,8 @@ After=network.target
 
 [Service]
 User=pi
+# amixer -c 1 sset Mic 100%
+# ExecStartPre=v4l2-ctl --set-ctrl rotate=90 --set-ctrl vertical_flip=0 --set-ctrl horizontal_flip=0 --set-ctrl color_effects=0
 ExecStart=v4l2rtspserver -W 1280 -H 720 -t 3 /dev/video0,hw:1,0 -C 1 -a S16_LE
 Restart=always
 RestartSec=3
