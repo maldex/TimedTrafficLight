@@ -14,9 +14,14 @@ cmake .
 make
 sudo make install
 popd
-
-# run
-su - pi -c 'v4l2rtspserver -W 1280 -H 720 -t 3 /dev/video0,hw:1,0 -C 1 -a S16_LE'
+```
+vi /etc/rc.local
+```bash
+...
+# start v4l2rtspserver
+amixer -c 1 sset Mic 100%
+v4l2-ctl --set-ctrl rotate=90 --set-ctrl vertical_flip=0 --set-ctrl horizontal_flip=0 --set-ctrl color_effects=0
+su - pi -c 'v4l2rtspserver -W 1280 -H 720 -t 3 /dev/video0,hw:1,0 -C 1 -a S16_LE' &
 ```
 ---
 ## using [UV4l](https://www.linux-projects.org/uv4l/) 
